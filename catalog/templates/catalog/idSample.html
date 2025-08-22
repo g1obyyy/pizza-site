@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Pizza">
+    <meta name="description" content="">
+    <title>{% block head %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'catalog/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'catalog/css/id.css' %}" media="screen">
+    <link rel="icon" href="{% static 'catalog/img/icon.png' %}" type="android-chrome-512x512.png">
+    <script class="u-script" type="text/javascript" src="{% static 'catalog/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'catalog/js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "{% static 'catalog/img/logo.png' %}"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="id1">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-header" id="sec-0621"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a class="u-image u-logo u-image-1" data-image-width="1000" data-image-height="1000">
+          <img src="{% static 'catalog/img/logo.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../../" style="padding: 10px 20px;">О нас</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../" style="padding: 10px 20px;">Меню</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../">О нас</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../catalog">Меню</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-grey-10 u-section-1" id="sec-0655">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-palette-2-base u-shape u-shape-circle u-shape-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Right" data-animation-delay="0"></div>
+        {% block image %}{% endblock %}
+        <div class="u-align-left u-container-style u-group u-white u-group-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Left" data-animation-delay="250">
+          <div class="u-container-layout u-valign-bottom u-container-layout-1">
+            {% block name %}{% endblock %}
+            <ul class="u-custom-list u-text u-text-2">
+              <li>
+                <div class="u-list-icon">
+                  <div></div>
+                </div>
+                <div class="u-list-icon">
+                  <div></div>
+                </div>
+              </li>
+              <li>
+                <div class="u-list-icon">
+                  <div>▹</div>
+                </div>{% block description %}{% endblock %}
+              </li>
+            </ul>
+            <ul class="u-custom-list u-text u-text-3">
+              <li>
+                <div class="u-list-icon">
+                  <div></div>
+                </div>
+              </li>
+                <li>
+                <div class="u-list-icon">
+                  <div>▹</div>
+                </div>Пищевая ценность:
+              </li>
+              <li>Белки {% block proteing %}{% endblock %}</li>
+              <li>
+                <div class="u-list-icon">
+                  <div></div>
+                </div>Жиры {% block fatsg %}{% endblock %}
+              </li>
+              <li>
+                <div class="u-list-icon">
+                  <div></div>
+                </div>Углеводы {% block carbog %}{% endblock %}
+              </li>
+              <li>
+                <div class="u-list-icon">
+                </div>{% block calories %}{% endblock %} ккал
+              </li>
+            </ul>
+            <a href="" class="u-active-grey-90 u-btn u-btn-round u-button-style u-color-scheme-summer-time u-color-style-multicolor-1 u-hover-grey-90 u-palette-2-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">стоимость: {% block cost %}{{cost}}{% endblock %}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-5f3d"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">По всем вопросам seregaspizza@yandex.ru</p>
+      </div></footer>
+
+</body></html>

@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​Life is a combination of magic and pizza, Italy Pizza Menu, ​The taste of Italy, ​Satisfy Your Pizza Cravings Today!">
+    <meta name="description" content="">
+    <title>Меню {{city}}</title>
+    <link rel="stylesheet" href="{% static 'catalog/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'catalog/css/Меню.css' %}" media="screen">
+    <link rel="icon" href="{% static 'catalog/img/icon.png' %}" type="android-chrome-512x512.png">
+    <script class="u-script" type="text/javascript" src="{% static 'catalog/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'catalog/js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500,600,700">
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "{% static 'catalog/img/logo.png' %}"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Меню">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-header" id="sec-0621"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="../" class="u-image u-logo u-image-1" data-image-width="1000" data-image-height="1000">
+          <img src="{% static 'catalog/img/logo.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="http://127.0.0.1:8000" style="padding: 10px 20px;">О нас</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="" style="padding: 10px 20px;">Меню</a>
+</li><li class="u-nav-item"><a class="u-button-style u-dialog-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#sec-ee09" style="padding: 10px 20px;">Город</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../catalog">О нас</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../catalog">Меню</a>
+</li><li class="u-nav-item"><a class="u-button-style u-dialog-link u-nav-link" href="#sec-ee09">Город</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="carousel_5daf">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">Меню {{city}}</h2>
+        <div class="u-expanded-width u-tab-links-align-center u-tabs u-tabs-1">
+          <ul class="u-spacing-15 u-tab-list u-unstyled" role="tablist">
+
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-1" id="link-tab-tab1" href="#tab-tab1" role="tab" aria-controls="tab-tab1" aria-selected="true">{{category.0.category}}</a>
+            </li>
+
+            {% for cat in category %}
+            {% if cat.category != "Все" %}
+            <li class="u-tab-item" role="presentation">
+              <a class="u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-1" id="link-tab-tab{{cat.id}}" href="#tab-tab{{cat.id}}" role="tab" aria-controls="tab-tab{{cat.id}}" aria-selected="false">{{cat.category}}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        <style>
+            .sale {
+             color: red; /* Красный цвет выделения */
+            }
+        </style>
+          </ul>
+          <div class="u-tab-content">
+              <div class="u-align-left u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-tab1" role="tabpanel" aria-labelledby="link-tab-tab1">
+              <div class="u-container-layout u-container-layout-1">
+                <div class="u-list u-list-1">
+                  <div class="u-repeater u-repeater-1">
+                      {% if pizzas %}
+                      {% for pizza in pizzas %}
+                        <div class="u-container-style u-list-item u-radius-25 u-repeater-item u-tab-active u-shape-round u-video-cover u-white u-list-item-{{ forloop.counter }}" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                          <div class="u-container-layout u-similar-container u-container-layout-{{ forloop.counter }}">
+                            <img class="u-expanded-width u-image u-image-round u-radius-20 u-image-1" src="{{pizza.img.url}}" alt="" data-image-width="800" data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-href="1/id{{pizza.id}}/">
+                              <h4 class="u-custom-font u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{{pizza.tittle}} {% if pizza.sale %}<span class="sale">SALE! {{pizza.cost}}₽</span>{% else %}{{pizza.cost}}₽{% endif %}</h4>
+                            <p class="u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{{pizza.description}}<br>
+                            </p>
+                          </div>
+                        </div>
+                      {% endfor %}
+                      {% else %}
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span>No pizza :(</span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                      {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% for cat in category %}
+            {% if cat.category != "Все" %}
+            <div class="u-align-left u-container-style u-shape-rectangle u-tab-pane" id="tab-tab{{cat.id}}" role="tabpanel" aria-labelledby="link-tab-tab{{cat.id}}">
+              <div class="u-container-layout u-container-layout-1">
+                <div class="u-list u-list-1">
+                  <div class="u-repeater u-repeater-1">
+                      {% for pizza in pizzas %}
+                      {% if cat in pizza.category.all %}
+                        <div class="u-container-style u-list-item u-radius-25 u-repeater-item u-tab-active u-shape-round u-video-cover u-white u-list-item-{{ forloop.counter }}" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                          <div class="u-container-layout u-similar-container u-container-layout-{{ forloop.counter }}">
+                            <img class="u-expanded-width u-image u-image-round u-radius-20 u-image-1" src="{{pizza.img.url}}" alt="" data-image-width="800" data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-href="{{cat.id}}/id{{pizza.id}}/">
+                              <h4 class="u-custom-font u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{{pizza.tittle}} {% if pizza.sale %}<span class="sale">SALE! {{pizza.cost}}₽</span>{% else %}{{pizza.cost}}₽{% endif %}</h4>
+                            <p class="u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{{pizza.description}}<br>
+                            </p>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if cat in isNone %}
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span>No such pizza :(</span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                      {% endif %}
+                      {% empty %}
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span>No such pizza :(</span>
+                            </p>
+                            <p class="u-text u-align-center">
+                            <span> </span>
+                            </p>
+                      {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="u-backlink u-clearfix u-grey-80">
+
+      <p class="u-text">
+        <span>ОАО "СерегасПицца" 2004-2023</span>
+      </p>
+    </section>
+<section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-dialog-section-4" id="sec-ee09">
+      <div class="u-container-style u-dialog u-radius-13 u-shape-round u-white u-dialog-1">
+        <div class="u-container-layout u-container-layout-1">
+          <h5 class="u-align-center u-text u-text-1">Выбор города</h5>
+            {% for city in citys %}
+          <ul class="u-custom-list u-text u-text-2">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="http://127.0.0.1:8000/catalog/{{city}}/" target="_blank">
+              <li>
+                <div class="u-list-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-1262"><path d="m365.5 309c-35.7.7-70.2-13-95.8-38-22.2-21.6-52.2-33.4-83.2-32.7-26.1-.3-51.6 7.8-72.6 23.3-2.7 2.1-6 3.2-9.4 3.3-4.5 0-8.9-2-11.8-5.5-3-3.4-4.6-7.8-4.5-12.3v-198.8c0-4.9 1.9-9.5 5.4-13 25.4-23.1 58.6-35.8 92.9-35.3 35.8-.8 70.4 12.9 96 38 22.2 21.6 52.1 33.3 83 32.7 21.3.2 42.2-5.1 60.8-15.4 2.3-1.4 5-2.2 7.7-2.2 9.3.4 16.6 8.3 16.2 17.7v200.8c.2 6-2.7 11.6-7.6 15-22.9 14.9-49.8 22.7-77.1 22.4z" fill="#e64c3c"></path><path d="m79.5 0c9.8 0 17.7 7.9 17.7 17.7v476.7c0 9.8-7.9 17.7-17.7 17.7-9.8 0-17.7-7.9-17.7-17.7v-476.7c0-9.8 7.9-17.7 17.7-17.7z" fill="#cbb292"></path></svg>
+                </div>{{city}}
+              </li>
+            </a>
+          </ul>
+            {% endfor %}
+
+
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-4 .u-dialog-1 {
+  width: 399px;
+  min-height: 863px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 59px auto 16px;
+}
+
+.u-dialog-section-4 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-4 .u-text-1 {
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+.u-dialog-section-4 .u-text-2 {
+  font-size: 1.5rem;
+  margin: 20px 0 0;
+}
+
+.u-dialog-section-4 .u-btn-1 {
+  background-image: none;
+  font-size: 1.125rem;
+  padding: 0;
+}
+
+.u-dialog-section-4 .u-text-3 {
+  margin: 0;
+}
+
+.u-dialog-section-4 .u-btn-2 {
+  background-image: none;
+  font-size: 1.125rem;
+  padding: 0;
+}
+
+.u-dialog-section-4 .u-icon-1 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-4 .u-dialog-1 {
+    width: 399px;
+  }
+
+  .u-dialog-section-4 .u-text-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-dialog-section-4 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-dialog-section-4 .u-text-3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-4 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-4 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-4 .u-text-2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-4 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-4 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}</style>
+</body></html>
