@@ -53,11 +53,12 @@ class Pizza(models.Model):
     description = models.TextField('Описание', default=None)
     cost = models.IntegerField("Стоимость", default=None)
     sale = models.BooleanField("По скидке?",default=False)
-    img = models.ImageField("Картинка", default="static/catalog/img/bg.jpg", upload_to="catalog/static/catalog/img/pizzas")
-    protein = models.IntegerField('Белки', default=None)
-    fats = models.IntegerField("Жиры", default=None)
-    carbon = models.IntegerField("Углеводы", default=None)
-    calories = models.IntegerField("Ккал", default=None)
+    img = models.ImageField("Картинка", upload_to="pizzas", blank=True, null=True)
+    weight = models.FloatField("Вес", null=True, blank=True)
+    protein = models.FloatField('Белки', null=True, blank=True)
+    fats = models.FloatField("Жиры", null=True, blank=True)
+    carbon = models.FloatField("Углеводы", null=True, blank=True)
+    calories = models.FloatField("Ккал", null=True, blank=True)
 
     def __str__(self):
         return self.tittle
